@@ -18,6 +18,7 @@ class CarService(models.Model):
 class Vehicle(models.Model):
     vehiclemake=models.CharField(max_length=255)
     vehiclemodel=models.CharField(max_length=255)
+    vehicleyear=models.IntegerField(null=True, blank=True)
     licenseplate=models.CharField(max_length=15)
     licensestate=models.CharField(max_length=2)
     owner=models.ForeignKey(User, on_delete=models.DO_NOTHING)

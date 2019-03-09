@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<h2>
+    Your Vehicle(s)
+</h2>
+<table class='table'>
+    <tr>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Licence</th>
+        <th>State</th>
+    </tr>
+    {% for item in v_list   %}
+        <tr>
+            <td>{{ item.vehiclemake}}</td>
+            <td>{{ item.vehiclemodel}}</td>
+            <td>{{ item.vehicleyear }}</td>
+            <td>{{ item.licenseplate }}</td>
+            <td>{{ item.licensestate}}</td>
+        </tr>
+    
+    {% endfor %}
+
+</table>
+
+{%  endblock %}

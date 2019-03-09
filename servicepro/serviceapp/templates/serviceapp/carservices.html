@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<h2>
+    Services
+</h2>
+<table class='table'>
+    <tr>
+        <th>Name</th>
+        <th>Parts</th>
+        <th>Labor</th>
+        <th>Description</th>
+    </tr>
+    {% for item in serv_list   %}
+        <tr>
+            <td>{{ item.servicename }}</td>
+            <td>{{ item.partsprice }}</td>
+            <td>{{ item.laborprice }}</td>
+            <td>{{ item.servicedescription }}</td>
+        </tr>
+    
+    {% endfor %}
+
+</table>
+
+{%  endblock %}
